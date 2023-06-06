@@ -34,9 +34,10 @@ const HomePage = () => {
           {movies.map((each_movie) => {
             return (
               <article>
-              <img src={each_movie.show.image.medium} alt="default" />
+              <img className="grid-article-img" src={each_movie.show.image.medium} alt="default" />
               <div className="text">
               <h4>{each_movie.show.name}</h4>
+              <h4>{each_movie.show.genres[0]}</h4>
               <Link
                   to={`/summary/${each_movie.show.id}`}
                   onClick={() => handleMovieClick(each_movie.show)}

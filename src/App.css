@@ -1,260 +1,201 @@
-* {
-  overflow: hidden;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-    scrollbar-color: rgb(213, 143, 13) rgb(30, 32, 30);
-  
+/* App.css */
+*{
+  scrollbar-color: rgb(42, 42, 39) black;
+  scrollbar-width: thin;
 }
 
-.body {
 
-  background: url(https://images.unsplash.com/photo-1610890690846-5149750c8634?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlYXRlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80
-) no-repeat center center/cover;
+/* Set background color for the whole body */
+body {
+  
+  background: url(https://wallpapers.com/images/hd/plain-gold-gradient-desktop-75iflvdthzzv177v.jpg
+  ) repeat center center/cover;
   height: 100vh;
   top: 0px;
   left: 0px;
   width: 100%;
   position: relative;
-  /* background-color: rgba(0, 0, 0, 0.5) */
-
 }
 
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-}
-
-
+/* Header styles */
 .header {
   display: flex;
-  justify-content: space-between;
-  border: 1px solid black;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1px;
-  position: absolute;
-  z-index: 2;
-  width: 100vw;
-}
-
-.header a {
-  text-decoration: none;
-  color: white;
-}
-
-.header img {
-  height: 62px;
-  padding: 2px;
+  align-items: center;
+  justify-content: center;
+  color: gold;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  
 }
 
 .header h1 {
-  padding-left: 44px;
-  color: white;
-  font-size: 30px;
+  margin-left: 10px;
 }
 
-.nav-items {
-  display: flex;
-  list-style: none;
-
-}
-
-.nav-items li {
-  padding-right: 10px;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-.MoviesList-title{
-  color:white;
+/* Logo styles */
+.header img {
+  width: 123px;
+  height: 123px;;
   position: absolute;
-  top: 107px;
-left: 214px;
-  z-index: 2;
-}
-
-.search {
-  width: 41%;
-  position: absolute;
-  top: 123px;
-  display: flex;
-  left: 675px;
-  z-index: 2;
-}
-
-.searchTerm {
-  width: 100%;
-  border: 3px solid #22211ecb;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #bdd1c8;
-  background-color: #161818;
-}
-
-
-
-.searchButton {
-  width: 90px;
-  height: 34px;
-  border: 1px solid #161818;
-  background:white;
-  text-align: center;
-  color: rgb(58, 46, 46);
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.MoviesList-container{
-  position: absolute;
-  top: 170px;
   left: 10px;
-  width: 35%;
-  height: 73%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  position: absolute;
-  z-index: 2;
-  border: 1px solid white;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-
-
-.result-container {
-  position: absolute;
-  top: 160px;
-  left: 549px;
-  width: 62%;
-  height: 73%;
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  position: absolute;
-  z-index: 3;
-  border: 1px solid white;
-}
-
-.card {
-  border: 1px solid white;
-  margin: 5px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-}
-
-.card-title {
-  color: white;
-}
-
-.read-more {
-  color: white;
-  text-decoration: none;
-}
-
-.add-btn{
-  margin: 2px;
-  padding: 2px;
-}
-
-.grid { 
+/* HomePage styles */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-  position: absolute;
-  top: 83px;
-  left: 0px;
-  width: 97%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  position: absolute;
-  z-index: 2;
-  border: 1px solid rgb(31, 11, 11);
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  }
-.grid > article {
-  border: 1px solid #191717;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  grid-template-columns: repeat(5, 20fr);
+  grid-gap: 10px;
+  margin: 50px;
+  padding: 10px;
+  
+  background-color: rgb(20, 18, 18);
+}
+
+.grid article {
   background-color: black;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
 }
-.grid > article img {
-  max-width: 100%;
-}
-.text {
-  padding: 0 20px 20px;
-}
-.text > button {
-  background: gray;
-  border: 0;
-  color: white;
-  padding: 10px;
+
+.grid-article-img{
   width: 100%;
-  }
+  height: auto;
+}
 
+.grid article h3 {
+  color: white;
+  font-style:oblique;
+  margin-top: 10px;
+}
 
+.Subheaders{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
 
+.Subheaders-img{
+  height: 18px;
+  width: 20px;
+  text-align: center;
+  justify-content: center;
+}
 
-
-
-
-  .summary-title{
-    color: white;
-    z-index: 2;
-  }
-
-  .summary-description{
-    color: white;
-    z-index: 2;
-  }
-
-  .book-movie-btn{
-    color: white;
-    background-color: black;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  .summary-container{
-    position: absolute;
-    top:200px;
-    z-index: 2;
-  }
-
+.grid article h4 {
+  color: gold;
+  margin-top: 10px;
   
-  .book-movie-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 400px;
-    padding: 20px;
-    z-index: 1000;
-    color: white;
-  }
-  
+}
+
+.grid article a {
+  color: rgb(180, 123, 17);
+  text-decoration: none;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Summary styles */
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 80%;
+  height: 60%;
+}
+
+.summary-movie-name {
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.summary-description {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.book-movie-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* BookMovie styles */
+.book-movie-container {
+  position: fixed;
+  margin-top: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  height: 500px;
+  width: 750px;
+  padding: 20px;
+  z-index: 1000;
+  color: white;
+}
+
+.Form-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(218, 156, 14);
+  color: rgb(23, 20, 20);
+  width: 200px;
+}
+
+
+.book-movie-container.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.book-movie-container h2, h1 {
+  color: gold;
+  text-align: center;
+}
+
+.book-movie-container form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-movie-container label {
+  color: rgb(22, 19, 19);
+  margin-bottom: 5px;
+}
+
+.book-movie-container input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.book-movie-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color:rgb(218, 156, 14);
+  color: rgb(19, 18, 17);
+  border-radius: 58%;
+  cursor: pointer;
+}
+
