@@ -107,22 +107,23 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  width: 80%;
   height: 60%;
+  padding: 0;
 }
+
 
 .summary-movie-name {
   justify-content: center;
   text-align: center;
-  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  align-items: center;
+  color: rgb(19, 17, 17);
 }
 
 .summary-description {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+ width: 500px;
+  /* transform: translate(-50%, -50%); */
   justify-content: center;
   text-align: center;
   color: white;
