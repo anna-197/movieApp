@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+* {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+
+  background: url(https://wallpaperaccess.com/full/1773876.jpg
+) no-repeat center center/cover;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  position: relative;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  border: 1px solid black;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1px;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+}
+
+.header a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header img {
+  height: 62px;
+  padding: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h1 {
+  padding-left: 44px;
+  color: white;
+  font-size: 30px;
 }
+
+.nav-items {
+  display: flex;
+  list-style: none;
+
+}
+
+.nav-items li {
+  padding-right: 10px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.MoviesList-title{
+  color:white;
+  position: absolute;
+  top: 107px;
+left: 214px;
+  z-index: 2;
+}
+
+.search {
+  width: 41%;
+  position: absolute;
+  top: 123px;
+  display: flex;
+  left: 675px;
+  z-index: 2;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #22211ecb;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #bdd1c8;
+  background-color: #161818;
+}
+
+
+
+.searchButton {
+  width: 90px;
+  height: 34px;
+  border: 1px solid #161818;
+  background:white;
+  text-align: center;
+  color: rgb(58, 46, 46);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.MoviesList-container{
+  position: absolute;
+  top: 170px;
+  left: 10px;
+  width: 35%;
+  height: 73%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid white;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.result-container {
+  position: absolute;
+  top: 160px;
+  left: 549px;
+  width: 62%;
+  height: 73%;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 3;
+  border: 1px solid white;
+}
+
+.card {
+  border: 1px solid white;
+  margin: 5px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.card-title {
+  color: white;
+}
+
+.read-more {
+  color: white;
+  text-decoration: none;
+}
+
+.add-btn{
+  margin: 2px;
+  padding: 2px;
+}
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  }
