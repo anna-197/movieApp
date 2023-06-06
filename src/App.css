@@ -244,3 +244,17 @@ left: 214px;
     top:200px;
     z-index: 2;
   }
+
+  
+  .book-movie-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 400px;
+    padding: 20px;
+    z-index: 1000;
+    color: white;
+  }
+  
