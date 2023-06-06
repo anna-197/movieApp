@@ -11,9 +11,6 @@ const Header = () => {
           />
         
         <h1>Welcome to Movies Flix</h1>
-        <ul className="nav-items">
-          {/* <SearchBar/> */}
-        </ul>
       </div>
     </>
   )

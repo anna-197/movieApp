@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Axios from "axios";
-
-import MovieCard from "../components/MovieCard";
+import {Link} from 'react-router-dom'
+import { MovieContext } from "./MovieContext";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
+  const { setSelectedMovie } = useContext(MovieContext);
   // const [search, setSearch]=useState('');
 
 //   useEffect(() => {
@@ -23,14 +24,12 @@ const HomePage = () => {
     });
   }, []);
 
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+  };
+
   return (
     <>
-    <div className="container">
-        <h1 className="title"> Trending Movies </h1>
-        
-      </div>
-
-      
         <div className="grid">
           {movies.map((each_movie) => {
             return (
@@ -38,7 +37,12 @@ const HomePage = () => {
               <img src={each_movie.show.image.medium} alt="default" />
               <div className="text">
               <h4>{each_movie.show.name}</h4>
-              <button>Here's why</button>
+              <Link
+                  to={`/summary/${each_movie.show.id}`}
+                  onClick={() => handleMovieClick(each_movie.show)}
+                >
+                  Read More
+                </Link>
               </div>
                    
 
