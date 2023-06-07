@@ -1,6 +1,19 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie Shows App
+
+The Movie Shows App is a web application that provides a list of movies and allows users to book movie tickets. This README file provides an overview of the project and instructions for running the app.
+Features
+
+    Displays a list of movies available for viewing.
+    Allows users to book movie tickets by clicking the "Book Movie" button.
+    Redirects to a summary page with additional details after booking.
+
+Technologies Used
+
+    HTML
+    CSS
+    JavaScript
 
 ## Available Scripts
 
